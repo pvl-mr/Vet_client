@@ -13,6 +13,8 @@ namespace ClientBusinessLogic.ViewModels
         public System.DateTime Date { get; set; }
         [DisplayName("Медикамент")]
         public string MedicineName { get; set; }
+        [DisplayName("Описание")]
+        public string Description { get; set; }
         [DisplayName("Кол-во")]
         public int Count { get; set; }
 

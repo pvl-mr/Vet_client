@@ -12,103 +12,38 @@ namespace ClientBusinessLogic.BusinessLogic
     {
         private readonly IEntityStorage<VisitViewModel, VisitBindingModel> visitStorage;
         private readonly IEntityStorage<AnimalViewModel, AnimalBindingModel> animalStorage;
-        private readonly IEntityStorage<MedicineDinamicViewModel, MedicineDinamicBindingModel> medicineDimamicStorage;
+        private readonly IEntityStorage<MedicineViewModel, MedicineBindingModel> medicineStorage;
+        private readonly IReportStorage reportStorage;
 
-        public ClientReportLogic(IEntityStorage<VisitViewModel, VisitBindingModel> visitStorage, IEntityStorage<AnimalViewModel, AnimalBindingModel> animalStorage, IEntityStorage<MedicineDinamicViewModel, MedicineDinamicBindingModel> medicineDimamicStorage)
+        public ClientReportLogic(IEntityStorage<VisitViewModel, VisitBindingModel> visitStorage, IEntityStorage<AnimalViewModel, AnimalBindingModel> animalStorage, IEntityStorage<MedicineViewModel, MedicineBindingModel> medicineStorage, IReportStorage reportStorage)
         {
             this.visitStorage = visitStorage;
             this.animalStorage = animalStorage;
-            this.medicineDimamicStorage = medicineDimamicStorage;
+            this.medicineStorage = medicineStorage;
+            this.reportStorage = reportStorage;
         }
 
         private List<ReportVisitMedicinesViewModel> GetVisitMedicines(List<VisitViewModel> selectedVisits)
         {
-            var medicines = medicineDimamicStorage.GetFullList();
             var list = new List<ReportVisitMedicinesViewModel>();
 
             foreach (var visit in selectedVisits)
             {
-                var record = new ReportVisitMedicinesViewModel
+                list.Add(reportStorage.GetVisitMedicines(new VisitBindingModel
                 {
-                    VisitDate = visit.Date,
-                    Medicines = new List<MedicineDinamicViewModel>(),
-                };
-
-                var listMedicines = new List<MedicineDinamicViewModel>();
-
-                foreach (var visitAnimal in visit.Animals)
-                {
-                    var animal = animalStorage.GetElement(new AnimalBindingModel
-                    {
-                        Id = visitAnimal.Key
-                    });
-
-                    foreach (var medicine in medicines)
-                    {                  
-                            if (medicine.AnimalId == animal.Id)
-                            {
-                                if (!listMedicines.Contains(medicine))
-                                {
-                                    listMedicines.Add(medicine);
-                                }
-                            }
-                        
-                    }
-                }
-
-                foreach (var medicine in listMedicines)
-                {
-                    var medicineRecord = medicineDimamicStorage.GetElement(new MedicineDinamicBindingModel
-                    {
-                        Id = medicine.Id
-                    });
-                    record.Medicines.Add(medicineRecord);
-                }
-                list.Add(record);
+                    Id = visit.Id,
+                    Date = visit.Date,
+                    Comment = visit.Comment
+                }));
             }
             return list;
         }
 
-        //Получение списка путешествий с расшифровкой по экскурсиям и гидам
-        public List<ReportVisitsViewModel> GetVisitAnimalsMedicines(ReportVisitBindingModel model)
+        //Получение списка визитов с расшифровкой по животным и медикаментом
+        public List<ReportVisitsViewModel> GetVisitAnimalsMedicines(ReportVisitBindingModel model, int _ClientId)
         {
-            var visits = visitStorage.GetFilteredList(new VisitBindingModel
-            {
-                DateFrom = model.DateFrom.Value,
-                DateTo = model.DateTo.Value,
-                ClientId = model.ClientId
-            });
-
-            var medicines = medicineDimamicStorage.GetFullList();
-
-            var visitAnimalsMedicines = new List<ReportVisitsViewModel>();
-
-            foreach (var visit in visits)
-            {
-                foreach (var visitAnimal in visit.Animals)
-                {
-                    foreach (var medicine in medicines)
-                    {
-                        
-                            if (medicine.AnimalId == visitAnimal.Key)
-                            {
-                                var animal = animalStorage.GetElement(new AnimalBindingModel
-                                {
-                                    Id = medicine.AnimalId
-                                });
-
-                                visitAnimalsMedicines.Add(new ReportVisitsViewModel
-                                {
-                                    Date = visit.Date,
-                                    AnimalName = animal.Name,
-                                    MedicineName = medicine.MedicineName
-                                });
-                            }
-                        
-                    }
-                }
-            }
-            return visitAnimalsMedicines;
+            var list = reportStorage.GetFullListVisits(model, _ClientId);
+            return list;
         }
 
         public void SaveVisitMedicinesToWord(ReportVisitBindingModel model)
@@ -131,7 +66,7 @@ namespace ClientBusinessLogic.BusinessLogic
             });
         }
 
-        public void SaveVisitAnimalsMedicinesToPdf(ReportVisitBindingModel model)
+        public void SaveVisitAnimalsMedicinesToPdf(ReportVisitBindingModel model, int _ClientId)
         {
             ClientSaveToPdf.CreateDoc(new ClientPdfInfo
             {
@@ -139,7 +74,7 @@ namespace ClientBusinessLogic.BusinessLogic
                 Title = "Список животных и медикаментов по выбранным визитам",
                 DateFrom = model.DateFrom.Value,
                 DateTo = model.DateTo.Value,
-                VisitAnimalsMedicines = GetVisitAnimalsMedicines(model)
+                VisitAnimalsMedicines = GetVisitAnimalsMedicines(model, _ClientId)
             });
         }
     }

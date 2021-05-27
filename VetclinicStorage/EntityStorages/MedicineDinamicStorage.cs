@@ -20,6 +20,7 @@ namespace VetclinicStorage.EntityStorages
                 Date = s.Date,
                 Count = s.Count,
                 MedicineName = s.Medicine.Name,
+                Description = s.Medicine.Description,
                 AnimalBreed = s.Animal.Breed,
                 AnimalType = s.Animal.Type,
                 AnimalName = s.Animal.Name,

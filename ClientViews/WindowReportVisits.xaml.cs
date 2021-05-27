@@ -53,7 +53,7 @@ namespace ClientViews
                     DateFrom = DatePickerFrom.SelectedDate,
                     DateTo = DatePickerTo.SelectedDate,
                     ClientId = App.Client.Id
-                });
+                }, App.Client.Id);
                 DataGridReport.ItemsSource = dataSource;
                 
             }
@@ -82,7 +82,7 @@ namespace ClientViews
                             DateFrom = DatePickerFrom.SelectedDate,
                             DateTo = DatePickerTo.SelectedDate,
                             ClientId = App.Client.Id
-                        });
+                        }, App.Client.Id);
                         MessageBox.Show("Выполнено", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                     catch (Exception ex)
@@ -111,7 +111,7 @@ namespace ClientViews
                     DateFrom = DatePickerFrom.SelectedDate,
                     DateTo = DatePickerTo.SelectedDate,
                     ClientId = App.Client.Id
-                });
+                }, App.Client.Id);
 
                 MailLogic.MailSend(new MailSendInfo
                 {

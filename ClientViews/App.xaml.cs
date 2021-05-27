@@ -42,8 +42,8 @@ namespace ClientViews
             var currentContainer = new UnityContainer();
 
             currentContainer.RegisterType<IEntityStorage<MedicineViewModel, MedicineBindingModel>, MedicineStorage>(new HierarchicalLifetimeManager());
-            /*currentContainer.RegisterType<IEntityStorage<MedicineDinamicViewModel, MedicineDinamicBindingModel>, MedicineDinamicStorage>(new HierarchicalLifetimeManager());
-
+            currentContainer.RegisterType<IEntityStorage<MedicineDinamicViewModel, MedicineDinamicBindingModel>, MedicineDinamicStorage>(new HierarchicalLifetimeManager());
+            /*
              currentContainer.RegisterType<IEntityStorage<RecommendationViewModel, RecommendationBindingModel>, RecommendationStorage>(new HierarchicalLifetimeManager());
              currentContainer.RegisterType<IEntityStorage<DoctorViewModel, DoctorBindingModel>, DoctorsStorage>(new HierarchicalLifetimeManager());
  */
@@ -53,6 +53,7 @@ namespace ClientViews
             currentContainer.RegisterType<IEntityStorage<VaccinationViewModel, VaccinationBindingModel>, VaccinationStorage>(new HierarchicalLifetimeManager());
            currentContainer.RegisterType<IEntityStorage<VisitViewModel, VisitBindingModel>, VisitStorage>(new HierarchicalLifetimeManager());
            currentContainer.RegisterType<IEntityStorage<MedicineDinamicViewModel, MedicineDinamicBindingModel>, MedicineDinamicStorage>(new HierarchicalLifetimeManager());
+           currentContainer.RegisterType<IReportStorage, ReportStorage>(new HierarchicalLifetimeManager());
 
 
 
@@ -65,6 +66,7 @@ namespace ClientViews
             currentContainer.RegisterType<AnimalLogic>(new HierarchicalLifetimeManager());
             currentContainer.RegisterType<ServiceLogic>(new HierarchicalLifetimeManager());
             currentContainer.RegisterType<MailLogic>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<ClientReportLogic>(new HierarchicalLifetimeManager());
 
             return currentContainer;
         }
