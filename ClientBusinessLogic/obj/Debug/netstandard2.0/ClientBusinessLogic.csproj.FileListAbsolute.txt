@@ -1,0 +1,9 @@
+C:\Users\79962\source\repos\Vetclinic\ClientBusinessLogic\obj\Debug\netstandard2.0\ClientBusinessLogic.AssemblyInfoInputs.cache
+C:\Users\79962\source\repos\Vetclinic\ClientBusinessLogic\obj\Debug\netstandard2.0\ClientBusinessLogic.AssemblyInfo.cs
+C:\Users\79962\source\repos\Vetclinic\ClientBusinessLogic\obj\Debug\netstandard2.0\ClientBusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\79962\source\repos\Vetclinic\ClientBusinessLogic\bin\Debug\netstandard2.0\ClientBusinessLogic.deps.json
+C:\Users\79962\source\repos\Vetclinic\ClientBusinessLogic\bin\Debug\netstandard2.0\ClientBusinessLogic.dll
+C:\Users\79962\source\repos\Vetclinic\ClientBusinessLogic\bin\Debug\netstandard2.0\ClientBusinessLogic.pdb
+C:\Users\79962\source\repos\Vetclinic\ClientBusinessLogic\obj\Debug\netstandard2.0\ClientBusinessLogic.dll
+C:\Users\79962\source\repos\Vetclinic\ClientBusinessLogic\obj\Debug\netstandard2.0\ClientBusinessLogic.pdb
+C:\Users\79962\source\repos\Vetclinic\ClientBusinessLogic\obj\Debug\netstandard2.0\ClientBusinessLogic.csprojAssemblyReference.cache

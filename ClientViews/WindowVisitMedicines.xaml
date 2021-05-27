@@ -1,0 +1,29 @@
+﻿<Window x:Class="ClientViews.WindowVisitMedicines"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientViews"
+        mc:Ignorable="d"
+        Loaded="WindowGetTravelGuides_Load"
+        Title="Получение списка медикаментов" Height="450" Width="450">
+    <Window.Resources>
+        <Style  TargetType="Label">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontFamily" Value="Consolas" />
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="167*"/>
+            <ColumnDefinition Width="54*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Выберите визиты:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="33" Width="195"/>
+        <ListBox x:Name="ListBoxVisits" DisplayMemberPath="Date" SelectionMode="Multiple" HorizontalAlignment="Left" Height="315" Margin="0,48,-1,0" VerticalAlignment="Top" Width="443" Grid.ColumnSpan="2">
+        </ListBox>
+        <Button x:Name="ButtonExcel" Content="Excel" Click="ButtonSaveToExcel_Click" HorizontalAlignment="Left" Margin="15,380,0,0" VerticalAlignment="Top" Width="120" Height="30" Background="#FFFFDCB1"/>
+        <Button x:Name="ButtonWord" Content="Word" Click="ButtonSaveToWord_Click" HorizontalAlignment="Left" Margin="165,380,0,0" VerticalAlignment="Top" Width="120" Height="30" Background="#FFFFDCB1"/>
+        <Button x:Name="ButtonCancel" Content="Отмена" Click="ButtonCancel_Click" Margin="313,380,9,0" VerticalAlignment="Top" Width="120" Height="30" Grid.ColumnSpan="2" Background="#FFFFDCB1"/>
+    </Grid>
+</Window>

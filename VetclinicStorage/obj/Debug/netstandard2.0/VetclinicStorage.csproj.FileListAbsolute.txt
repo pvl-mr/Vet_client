@@ -1,0 +1,12 @@
+C:\Users\79962\source\repos\Vetclinic\VetclinicStorage\obj\Debug\netstandard2.0\VetclinicStorage.csprojAssemblyReference.cache
+C:\Users\79962\source\repos\Vetclinic\VetclinicStorage\obj\Debug\netstandard2.0\VetclinicStorage.AssemblyInfoInputs.cache
+C:\Users\79962\source\repos\Vetclinic\VetclinicStorage\obj\Debug\netstandard2.0\VetclinicStorage.AssemblyInfo.cs
+C:\Users\79962\source\repos\Vetclinic\VetclinicStorage\obj\Debug\netstandard2.0\VetclinicStorage.csproj.CoreCompileInputs.cache
+C:\Users\79962\source\repos\Vetclinic\VetclinicStorage\bin\Debug\netstandard2.0\VetclinicStorage.deps.json
+C:\Users\79962\source\repos\Vetclinic\VetclinicStorage\bin\Debug\netstandard2.0\VetclinicStorage.dll
+C:\Users\79962\source\repos\Vetclinic\VetclinicStorage\bin\Debug\netstandard2.0\VetclinicStorage.pdb
+C:\Users\79962\source\repos\Vetclinic\VetclinicStorage\bin\Debug\netstandard2.0\ClientBusinessLogic.dll
+C:\Users\79962\source\repos\Vetclinic\VetclinicStorage\bin\Debug\netstandard2.0\ClientBusinessLogic.pdb
+C:\Users\79962\source\repos\Vetclinic\VetclinicStorage\obj\Debug\netstandard2.0\VetclinicStorage.csproj.CopyComplete
+C:\Users\79962\source\repos\Vetclinic\VetclinicStorage\obj\Debug\netstandard2.0\VetclinicStorage.dll
+C:\Users\79962\source\repos\Vetclinic\VetclinicStorage\obj\Debug\netstandard2.0\VetclinicStorage.pdb

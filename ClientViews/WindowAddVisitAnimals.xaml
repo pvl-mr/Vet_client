@@ -1,0 +1,29 @@
+﻿<Window x:Class="ClientViews.WindowAddVisitAnimals"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientViews"
+        mc:Ignorable="d"
+        Loaded="WindowBondTravelExcursions_Load"
+        Title="Привязать животного к визиту" Height="450" Width="690">
+
+    <Grid HorizontalAlignment="Left" Width="680">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="310*"/>
+            <ColumnDefinition Width="321*"/>
+            <ColumnDefinition Width="49*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="ListBoxSelectedExcursions" DisplayMemberPath="Value" SelectedValuePath="AnimalId" HorizontalAlignment="Left" Height="290" Margin="29,60,0,0" VerticalAlignment="Top" Width="250"/>
+        <ListBox x:Name="ListBoxAvaliableExcursions" DisplayMemberPath="Name" SelectedValuePath="Id" HorizontalAlignment="Left" Height="290" Margin="87.6,60,0,0" VerticalAlignment="Top" Width="250" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+        <Button x:Name="ButtonAddExcursion" Click="ButtonAddExcursion_Click" Background="#FFFFDCB1" Content="&lt;-" HorizontalAlignment="Left" Margin="307,140,0,0" VerticalAlignment="Top" Width="70" Height="20" Grid.ColumnSpan="2"/>
+        <Button x:Name="ButtonRemoveExcursion" Click="ButtonRemoveExcursion_Click" Background="#FFFFDCB1" Content="->" HorizontalAlignment="Left" Margin="307,220,0,0" VerticalAlignment="Top" Width="70" Height="20" Grid.ColumnSpan="2"/>
+
+        <Label Content="Выбранные экскурсии:" HorizontalAlignment="Left" Margin="24,20,0,0" VerticalAlignment="Top" Height="29" Width="200"/>
+        <Label Content="Доступные экскурсии:" HorizontalAlignment="Left" Margin="87.6,20,0,0" VerticalAlignment="Top" Grid.Column="1" Height="29" Width="200"/>
+
+        <Button x:Name="ButtonBond" Click="ButtonBond_Click" Content="Сохранить" Background="#FFFFDCB1" HorizontalAlignment="Center" Margin="231,370,314.153,0" VerticalAlignment="Top" Width="86" Height="30" Grid.ColumnSpan="2"/>
+        <Button x:Name="ButtonCancel" Click="ButtonCancel_Click" Content="Отмена" Background="#FFFFDCB1" HorizontalAlignment="Center" Margin="66.6,370,168.153,0" VerticalAlignment="Top" Width="86" Height="30" Grid.Column="1"/>
+    </Grid>
+</Window>

@@ -1,0 +1,42 @@
+﻿<Window x:Class="ClientViews.WindowPet"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientViews"
+        mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+        Loaded="WindowExcursion_Load"
+      Title="UpdatePet" FontFamily="Calibri Light">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Grid.Column="1" >
+            <TextBlock Text="Ваш питомец" FontSize="24" Margin="0 0 0 20" TextAlignment="Center" FontWeight="Bold" ></TextBlock>
+            <TextBox x:Name="TextBoxType" Text="Вид" Style="{DynamicResource TextBoxStyle1}"/>
+            <TextBox x:Name="TextBoxName" Text="Кличка" Style="{StaticResource TextBoxStyle1}"/>
+            <TextBox x:Name="TextBoxBreed" Text="Порода" Style="{StaticResource TextBoxStyle1}" />
+            <TextBox x:Name="TextBoxDescription" Text="Описание" Height=" 40" Background="#fafafa" Style="{StaticResource TextBoxStyle1}"  />
+            <ComboBox x:Name="ComboBoxPlaces" DisplayMemberPath="Name" Margin="0, 20" SelectedValuePath="ID" FontSize="15"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Click="ButtonSave_Click" Content="Сохранить"  Margin="10 20" Height="45"  FontSize="20" Style="{DynamicResource ButtonStyle1}" Background="#FFFFDCB1"></Button>
+                <Button Grid.Column="1" Content="Отменить"  Margin="10 20" Height="45" FontSize="20" Style="{DynamicResource ButtonStyle1}" Background="#FFFFDCB1"></Button>
+            </Grid>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

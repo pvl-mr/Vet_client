@@ -1,0 +1,35 @@
+﻿<Window x:Class="ClientViews.WindowVaccinations"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientViews"
+              mc:Ignorable="d"
+        Loaded="WindowVaccinations_Load"
+        Height="450" Width="900" ResizeMode="NoResize"
+      Title="PetsPage" FontFamily="Calibri Light">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="DataGridVaccinations" Grid.Column="0" Style="{StaticResource General_datagrid}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Visibility="Hidden" Binding="{Binding Path=ID}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Дата" Binding="{Binding Path=Date}" Width="1*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Название прививки" Binding="{Binding Path=Name}" Width="1*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Описание" Binding="{Binding Path=Description}" Width="1*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Питомец" Binding="{Binding Path=AnimalId}" Width="1*"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <Button x:Name="ButtonAdd" Click="ButtonAdd_Click" Content="Зарегистрировать" Margin="10 30 10 10" Height="45" Background="#FFFFDCB1" Style="{StaticResource ButtonStyle1}"/>
+            <Button x:Name="ButtonUpdate" Click="ButtonUpdate_Click" Content="Редактировать" Margin="10" Height="45" Background="#FFFFDCB1" Style="{StaticResource ButtonStyle1}"/>
+            <Button x:Name="ButtonDelete" Click="ButtonDelete_Click" Content="Удалить" Margin="10" Height="45" Background="#FFFFDCB1" Style="{StaticResource ButtonStyle1}"/>
+            <Button x:Name="ButtonRefresh" Click="ButtonRefresh_Click" Content="Обновить" Margin="10" Height="45" Background="#FFFFDCB1" Style="{StaticResource ButtonStyle1}"/>
+        </StackPanel>
+        <Grid Grid.Row="0" Grid.Column="0" >
+            <Frame Content="{Binding CurrentPage}"/>
+        </Grid>
+    </Grid>
+</Window>
