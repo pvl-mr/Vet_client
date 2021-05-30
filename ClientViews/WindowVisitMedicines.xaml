@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ClientViews"
         mc:Ignorable="d"
         Loaded="WindowGetVisitMedicines_Load"
-        Title="Получение списка медикаментов" Height="450" Width="450">
+        Title="Получение списка медикаментов по визитам" Height="450" Width="450">
     <Window.Resources>
         <Style  TargetType="Label">
             <Setter Property="FontSize" Value="16" />

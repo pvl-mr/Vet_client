@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ClientViews" xmlns:DVC1="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
         mc:Ignorable="d"
                 Loaded="WindowStatistics_Load"
-        Title="WindowStatisticServicesVisit" Height="450" Width="800">
+        Title="Статистика услуг по визитам" Height="450" Width="800">
     <Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0, 30, 0, 0">
             <DVC1:Chart Height="400" Width="750" Name="mcChartCountries" Background="White" Title="Частые услуги по визитам:" FontFamily="Gautami" FontSize="12" FontWeight="Bold" Foreground="Black">

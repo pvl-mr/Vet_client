@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ClientViews"
         mc:Ignorable="d"
         Loaded="WindowVaccination_Load"
-      Title="UpdatePet" FontFamily="Calibri Light">
+      Title="Прививка" FontFamily="Calibri Light">
 
     <Grid>
         <Grid.ColumnDefinitions>

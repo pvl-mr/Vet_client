@@ -6,8 +6,7 @@
         xmlns:local="clr-namespace:ClientViews"
         mc:Ignorable="d"
         Loaded="WindowAddAnimalsToVisit_Load"
-        Title="Привязать животного к визиту" Height="450" Width="690">
-
+        Title="Добавление питомца к визиту" Height="450" Width="690">
     <Grid HorizontalAlignment="Left" Width="680">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="310*"/>

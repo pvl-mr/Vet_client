@@ -7,7 +7,7 @@
         mc:Ignorable="d"
           d:DesignHeight="450" d:DesignWidth="800"
         Loaded="WindowVisit_Load"
-      Title="UpdateVisitPage" FontFamily="Calibri Light">
+      Title="Визит" FontFamily="Calibri Light">
 
     <Grid>
         <Grid.ColumnDefinitions>

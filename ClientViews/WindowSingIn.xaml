@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ClientViews"
              mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Authorization" FontFamily="Calibri Light">
+      Title="Авторизация" FontFamily="Calibri Light">
 
     <Grid>
         <Grid.ColumnDefinitions>

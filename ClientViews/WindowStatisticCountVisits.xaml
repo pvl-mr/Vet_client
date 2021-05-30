@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ClientViews" xmlns:DVC1="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
         mc:Ignorable="d"
                 Loaded="WindowStatistics_Load"
-        Title="WindowStatisticCountVisits" Height="450" Width="800">
+        Title="Статистика по количеству визитов" Height="450" Width="800">
     <Grid>
         <DVC1:Chart Height="200"  Name="mcChartVisits" Background="White" Title="Количество визитов по месяцам" FontFamily="Gautami" FontSize="12" FontWeight="Bold" Foreground="Black">
             <DVC1:Chart.Series>

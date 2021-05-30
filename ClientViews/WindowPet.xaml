@@ -7,7 +7,7 @@
         mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
         Loaded="WindowAnimal_Load"
-      Title="UpdatePet" FontFamily="Calibri Light">
+      Title="Питомец" FontFamily="Calibri Light">
 
     <Grid>
         <Grid.ColumnDefinitions>

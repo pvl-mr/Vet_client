@@ -7,7 +7,7 @@
               mc:Ignorable="d"
         Loaded="WindowVaccinations_Load"
         Height="450" Width="900" ResizeMode="NoResize"
-      Title="PetsPage" FontFamily="Calibri Light">
+      Title="Прививки" FontFamily="Calibri Light">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
