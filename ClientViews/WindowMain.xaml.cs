@@ -56,10 +56,6 @@ namespace ClientViews
             var form = Container.Resolve<WindowReportVisits>();
             form.ShowDialog();
         }
-        private void MenuItemStatistics_Click(object sender, RoutedEventArgs e)
-        {
-            var form = Container.Resolve<WindowStatistics>();
-            form.ShowDialog();
-        }
+        
     }
 }

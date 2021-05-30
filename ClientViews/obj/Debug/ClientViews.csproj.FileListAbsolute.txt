@@ -132,9 +132,7 @@ C:\Users\79962\source\repos\Vetclinic\ClientViews\bin\Debug\de\MigraDoc.Renderin
 C:\Users\79962\source\repos\Vetclinic\ClientViews\bin\Debug\de\MigraDoc.RtfRendering.resources.dll
 C:\Users\79962\source\repos\Vetclinic\ClientViews\bin\Debug\de\PdfSharp.resources.dll
 C:\Users\79962\source\repos\Vetclinic\ClientViews\bin\Debug\de\PdfSharp.Charting.resources.dll
-C:\Users\79962\source\repos\Vetclinic\ClientViews\obj\Debug\WindowStatistics.g.cs
 C:\Users\79962\source\repos\Vetclinic\ClientViews\bin\Debug\DotNetProjects.DataVisualization.Toolkit.dll
-C:\Users\79962\source\repos\Vetclinic\ClientViews\obj\Debug\WindowStatistics.baml
 C:\Users\79962\source\repos\Vetclinic\ClientViews\obj\Debug\WindowStatisticAnimal.g.cs
 C:\Users\79962\source\repos\Vetclinic\ClientViews\obj\Debug\WindowStatisticCountVisits.g.cs
 C:\Users\79962\source\repos\Vetclinic\ClientViews\obj\Debug\WindowStatisticServicesVisit.g.cs

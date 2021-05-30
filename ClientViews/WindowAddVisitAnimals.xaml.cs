@@ -44,7 +44,7 @@ namespace ClientViews
             });
         }
 
-        private void WindowBondTravelExcursions_Load(object sender, RoutedEventArgs e)
+        private void WindowAddAnimalsToVisit_Load(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -68,30 +68,28 @@ namespace ClientViews
         {
             try
             {
-                //Если к путешествию уже привязаны какие-то экскурсии, в ListBox с доступными экскурсиями 
-                //оставляем только непривязанные экскурсии
                 if (visitAnimals != null)
                 {
                     foreach (var animal in visitAnimals)
                     {
-                        ListBoxSelectedExcursions.Items.Add(animal);
+                        ListBoxSelectedAnimals.Items.Add(animal);
                     }
 
-                    ListBoxAvaliableExcursions.Items.Clear();
+                    ListBoxAvaliableAnimals.Items.Clear();
 
                     foreach (var animalAll in listAnimals)
                     {
                         if (!visitAnimals.ContainsKey(animalAll.Id))
                         {
-                            ListBoxAvaliableExcursions.Items.Add(animalAll);
+                            ListBoxAvaliableAnimals.Items.Add(animalAll);
                         }
                     }
                 }
                 else
                 {
-                    foreach (var excursionFromAll in listAnimals)
+                    foreach (var allAnimals in listAnimals)
                     {
-                        ListBoxAvaliableExcursions.Items.Add(excursionFromAll);
+                        ListBoxAvaliableAnimals.Items.Add(allAnimals);
                     }
                 }
             }
@@ -101,22 +99,22 @@ namespace ClientViews
             }
         }
 
-        private void ButtonAddExcursion_Click(object sender, RoutedEventArgs e)
+        private void ButtonAddAnimal_Click(object sender, RoutedEventArgs e)
         {
-            if (ListBoxAvaliableExcursions.SelectedItems.Count == 0)
+            if (ListBoxAvaliableAnimals.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Животное не выбрано", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-            visitAnimals.Add((int)ListBoxAvaliableExcursions.SelectedValue, (((AnimalViewModel)ListBoxAvaliableExcursions.SelectedItem).Name, ((AnimalViewModel)ListBoxAvaliableExcursions.SelectedItem).Description));
+            visitAnimals.Add((int)ListBoxAvaliableAnimals.SelectedValue, (((AnimalViewModel)ListBoxAvaliableAnimals.SelectedItem).Name, ((AnimalViewModel)ListBoxAvaliableAnimals.SelectedItem).Description));
             Listboxes_Reload();
         }
 
 
-        private void ButtonRemoveExcursion_Click(object sender, RoutedEventArgs e)
+        private void ButtonRemoveAnimal_Click(object sender, RoutedEventArgs e)
         {
-            if (ListBoxSelectedExcursions.SelectedItems.Count == 0)
+            if (ListBoxSelectedAnimals.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Животное не выбрано", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -128,7 +126,7 @@ namespace ClientViews
             {
                 try
                 {
-                    visitAnimals.Remove((int)ListBoxSelectedExcursions.SelectedValue);
+                    visitAnimals.Remove((int)ListBoxSelectedAnimals.SelectedValue);
                     Listboxes_Reload();
                 }
                 catch (Exception ex)
@@ -140,19 +138,19 @@ namespace ClientViews
 
         private void Listboxes_Reload()
         {
-            ListBoxAvaliableExcursions.Items.Clear();
-            ListBoxSelectedExcursions.Items.Clear();
+            ListBoxAvaliableAnimals.Items.Clear();
+            ListBoxSelectedAnimals.Items.Clear();
 
-            foreach (var selectedExcursion in visitAnimals)
+            foreach (var selectedAnimal in visitAnimals)
             {
-                ListBoxSelectedExcursions.Items.Add(selectedExcursion);
+                ListBoxSelectedAnimals.Items.Add(selectedAnimal);
             }
 
-            foreach (var tourFromAll in listAnimals)
+            foreach (var availableAnimal in listAnimals)
             {
-                if (!visitAnimals.ContainsKey(tourFromAll.Id))
+                if (!visitAnimals.ContainsKey(availableAnimal.Id))
                 {
-                    ListBoxAvaliableExcursions.Items.Add(tourFromAll);
+                    ListBoxAvaliableAnimals.Items.Add(availableAnimal);
                 }
             }
         }

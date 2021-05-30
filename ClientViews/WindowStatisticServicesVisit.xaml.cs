@@ -35,7 +35,7 @@ namespace ClientViews
 
         private void LoadData()
         {
-            ((PieSeries)mcChartCountries.Series[0]).ItemsSource = logic.GetCountriesInfo(App.Client.Id);
+            ((PieSeries)mcChartCountries.Series[0]).ItemsSource = logic.GetVisitsInfo(App.Client.Id);
         }
 
         private void WindowStatistics_Load(object sender, RoutedEventArgs e)

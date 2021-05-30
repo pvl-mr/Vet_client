@@ -33,7 +33,7 @@ namespace ClientViews
             this.logic = logic;
         }
 
-        private void WindowTravels_Load(object sender, RoutedEventArgs e)
+        private void WindowVisits_Load(object sender, RoutedEventArgs e)
         {
             LoadData();
         }
@@ -49,7 +49,7 @@ namespace ClientViews
 
                 if (list != null)
                 {
-                    DataGridTravels.ItemsSource = list;
+                    DataGridVisits.ItemsSource = list;
                 }
             }
             catch (Exception ex)
@@ -70,7 +70,7 @@ namespace ClientViews
 
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
-            if (DataGridTravels.SelectedItems.Count == 0)
+            if (DataGridVisits.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Выберите визит", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -78,7 +78,7 @@ namespace ClientViews
 
 
             var form = Container.Resolve<WindowVisit>();
-            form.Id = ((VisitViewModel)DataGridTravels.SelectedItems[0]).Id;
+            form.Id = ((VisitViewModel)DataGridVisits.SelectedItems[0]).Id;
 
             if (form.ShowDialog() == true)
             {
@@ -88,7 +88,7 @@ namespace ClientViews
 
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)
         {
-            if (DataGridTravels.SelectedItems.Count == 0)
+            if (DataGridVisits.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Выберите визит", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -99,7 +99,7 @@ namespace ClientViews
 
             if (result == MessageBoxResult.Yes)
             {
-                int id = ((VisitViewModel)DataGridTravels.SelectedItems[0]).Id;
+                int id = ((VisitViewModel)DataGridVisits.SelectedItems[0]).Id;
 
                 try
                 {
@@ -119,16 +119,16 @@ namespace ClientViews
             LoadData();
         }
 
-        private void ButtonBondExcursions_Click(object sender, RoutedEventArgs e)
+        private void ButtonBondAnimal_Click(object sender, RoutedEventArgs e)
         {
-            if (DataGridTravels.SelectedItems.Count == 0)
+            if (DataGridVisits.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Выберите визит", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
             var form = Container.Resolve<WindowAddVisitAnimals>();
-            form.Id = ((VisitViewModel)DataGridTravels.SelectedItems[0]).Id;
+            form.Id = ((VisitViewModel)DataGridVisits.SelectedItems[0]).Id;
 
             if (form.ShowDialog() == true)
             {

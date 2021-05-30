@@ -9,7 +9,7 @@
         Title="WindowStatisticServicesVisit" Height="450" Width="800">
     <Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0, 30, 0, 0">
-            <DVC1:Chart Height="200" Width="750" Name="mcChartCountries" Background="White" Title="Частые услуги по визитам:" FontFamily="Gautami" FontSize="12" FontWeight="Bold" Foreground="Black">
+            <DVC1:Chart Height="400" Width="750" Name="mcChartCountries" Background="White" Title="Частые услуги по визитам:" FontFamily="Gautami" FontSize="12" FontWeight="Bold" Foreground="Black">
                 <DVC1:Chart.Series>
                     <DVC1:PieSeries IndependentValueBinding="{Binding Path=Item1}" DependentValueBinding="{Binding Path=Item2}">
                     </DVC1:PieSeries>

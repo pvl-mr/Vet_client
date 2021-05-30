@@ -29,12 +29,12 @@ namespace ClientViews
         [Dependency]
         public IUnityContainer Container { get; set; }
         private readonly ClientReportLogic logic;
-        private readonly IEntityStorage<ClientViewModel, ClientBindingModel> touristStorage;
-        public WindowReportVisits(ClientReportLogic logic, IEntityStorage<ClientViewModel, ClientBindingModel> touristStorage)
+        private readonly IEntityStorage<ClientViewModel, ClientBindingModel> clientStorage;
+        public WindowReportVisits(ClientReportLogic logic, IEntityStorage<ClientViewModel, ClientBindingModel> clientStorage)
         {
             InitializeComponent();
             this.logic = logic;
-            this.touristStorage = touristStorage;
+            this.clientStorage = clientStorage;
         }
 
 

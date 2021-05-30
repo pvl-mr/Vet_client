@@ -67,17 +67,11 @@ namespace ClientBusinessLogic.BusinessLogic
                     }
                 }
             }
-            foreach (var obj in result)
-            {
-                Console.WriteLine("Item1 " + obj.Item1);
-                Console.WriteLine("Item2 " + obj.Item2);
-                Console.WriteLine("------------------");
-            }
             
             return result.OrderByDescending(rec => rec.Item2).Take(5).ToList();
         }
 
-        public List<Tuple<string, int>> GetCountriesInfo(int clientId)
+        public List<Tuple<string, int>> GetVisitsInfo(int clientId)
         {
             var listAllVisits = visitStorage.GetFilteredList(new VisitBindingModel
             {

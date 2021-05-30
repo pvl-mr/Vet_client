@@ -34,7 +34,7 @@ namespace ClientViews
 
         private void LoadData()
         {
-            ((ColumnSeries)mcChartExcursions.Series[0]).ItemsSource = logic.GetAnimalsInfo(App.Client.Id);
+            ((ColumnSeries)mcChartAnimals.Series[0]).ItemsSource = logic.GetAnimalsInfo(App.Client.Id);
         }
 
         private void WindowStatistics_Load(object sender, RoutedEventArgs e)

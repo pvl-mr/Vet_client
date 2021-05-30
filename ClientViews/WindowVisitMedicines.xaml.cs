@@ -27,7 +27,7 @@ namespace ClientViews
             this.reportLogic = reportLogic;
         }
 
-        private void WindowGetTravelGuides_Load(object sender, RoutedEventArgs e)
+        private void WindowGetVisitMedicines_Load(object sender, RoutedEventArgs e)
         {
             LoadData();
         }

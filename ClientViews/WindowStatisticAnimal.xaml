@@ -8,7 +8,7 @@
                 Loaded="WindowStatistics_Load"
         Title="WindowStatisticAnimal" Height="450" Width="800">
     <Grid>
-        <DVC1:Chart Height="200"  Name="mcChartExcursions" Background="White" Title="Породы животных" FontFamily="Gautami" FontSize="12" FontWeight="Bold" Foreground="Black" Margin="0, 30, 0, 0">
+        <DVC1:Chart Height="200"  Name="mcChartAnimals" Background="White" Title="Породы животных" FontFamily="Gautami" FontSize="12" FontWeight="Bold" Foreground="Black" Margin="0, 30, 0, 0">
             <DVC1:Chart.Series>
                 <DVC1:ColumnSeries Title="Породы" IndependentValueBinding="{Binding Path=Item1}" DependentValueBinding="{Binding Path=Item2}" FontSize="12" FontStyle="Normal">
                 </DVC1:ColumnSeries>

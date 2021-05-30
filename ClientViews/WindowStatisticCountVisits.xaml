@@ -8,7 +8,7 @@
                 Loaded="WindowStatistics_Load"
         Title="WindowStatisticCountVisits" Height="450" Width="800">
     <Grid>
-        <DVC1:Chart Height="200"  Name="mcChartTravels" Background="White" Title="Количество визитов по месяцам" FontFamily="Gautami" FontSize="12" FontWeight="Bold" Foreground="Black">
+        <DVC1:Chart Height="200"  Name="mcChartVisits" Background="White" Title="Количество визитов по месяцам" FontFamily="Gautami" FontSize="12" FontWeight="Bold" Foreground="Black">
             <DVC1:Chart.Series>
                 <DVC1:ColumnSeries Title="Визитов" IndependentValueBinding="{Binding Path=Item1}" DependentValueBinding="{Binding Path=Item2}">
                 </DVC1:ColumnSeries>

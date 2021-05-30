@@ -38,7 +38,7 @@ namespace ClientViews
 
                 if (list != null)
                 {
-                    DataGridExcursions.ItemsSource = list;
+                    DataGridAnimals.ItemsSource = list;
                 }
             }
             catch (Exception ex)
@@ -59,16 +59,16 @@ namespace ClientViews
 
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
-            if (DataGridExcursions.SelectedItems.Count == 0)
+            if (DataGridAnimals.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Выберите экскурсию", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
             var form = Container.Resolve<WindowPet>();
-            form.Id = ((AnimalViewModel)DataGridExcursions.SelectedItems[0]).Id;
+            form.Id = ((AnimalViewModel)DataGridAnimals.SelectedItems[0]).Id;
 
-            Console.WriteLine(((AnimalViewModel)DataGridExcursions.SelectedItems[0]).Id + " iddd ");
+            Console.WriteLine(((AnimalViewModel)DataGridAnimals.SelectedItems[0]).Id + " iddd ");
             if (form.ShowDialog() == true)
             {
                 LoadData();
@@ -77,7 +77,7 @@ namespace ClientViews
 
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)
         {
-            if (DataGridExcursions.SelectedItems.Count == 0)
+            if (DataGridAnimals.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Выберите животное", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -86,7 +86,7 @@ namespace ClientViews
 
             if (result == MessageBoxResult.Yes)
             {
-                int id = ((AnimalViewModel)DataGridExcursions.SelectedItems[0]).Id;
+                int id = ((AnimalViewModel)DataGridAnimals.SelectedItems[0]).Id;
 
                 try
                 {

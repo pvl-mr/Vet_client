@@ -34,8 +34,8 @@ namespace ClientViews
 
         private void LoadData()
         {
-            ((ColumnSeries)mcChartTravels.Series[0]).ItemsSource = logic.GetCountByMonths(0);
-            ((ColumnSeries)mcChartTravels.Series[0]).ItemsSource = logic.GetCountByMonths(App.Client.Id);
+            ((ColumnSeries)mcChartVisits.Series[0]).ItemsSource = logic.GetCountByMonths(0);
+            ((ColumnSeries)mcChartVisits.Series[0]).ItemsSource = logic.GetCountByMonths(App.Client.Id);
         }
 
         private void WindowStatistics_Load(object sender, RoutedEventArgs e)

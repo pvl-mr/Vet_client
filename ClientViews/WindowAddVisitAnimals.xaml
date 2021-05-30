@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClientViews"
         mc:Ignorable="d"
-        Loaded="WindowBondTravelExcursions_Load"
+        Loaded="WindowAddAnimalsToVisit_Load"
         Title="Привязать животного к визиту" Height="450" Width="690">
 
     <Grid HorizontalAlignment="Left" Width="680">
@@ -14,11 +14,11 @@
             <ColumnDefinition Width="321*"/>
             <ColumnDefinition Width="49*"/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="ListBoxSelectedExcursions" DisplayMemberPath="Value" SelectedValuePath="Key" HorizontalAlignment="Left" Height="290" Margin="29,60,0,0" VerticalAlignment="Top" Width="250"/>
-        <ListBox x:Name="ListBoxAvaliableExcursions" DisplayMemberPath="Name" SelectedValuePath="Id" HorizontalAlignment="Left" Height="290" Margin="87.6,60,0,0" VerticalAlignment="Top" Width="250" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <ListBox x:Name="ListBoxSelectedAnimals" DisplayMemberPath="Value" SelectedValuePath="Key" HorizontalAlignment="Left" Height="290" Margin="29,60,0,0" VerticalAlignment="Top" Width="250"/>
+        <ListBox x:Name="ListBoxAvaliableAnimals" DisplayMemberPath="Name" SelectedValuePath="Id" HorizontalAlignment="Left" Height="290" Margin="87.6,60,0,0" VerticalAlignment="Top" Width="250" Grid.Column="1" Grid.ColumnSpan="2"/>
 
-        <Button x:Name="ButtonAddExcursion" Click="ButtonAddExcursion_Click" Background="#FFFFDCB1" Content="&lt;-" HorizontalAlignment="Left" Margin="307,140,0,0" VerticalAlignment="Top" Width="70" Height="20" Grid.ColumnSpan="2"/>
-        <Button x:Name="ButtonRemoveExcursion" Click="ButtonRemoveExcursion_Click" Background="#FFFFDCB1" Content="->" HorizontalAlignment="Left" Margin="307,220,0,0" VerticalAlignment="Top" Width="70" Height="20" Grid.ColumnSpan="2"/>
+        <Button x:Name="ButtonAddAnimal" Click="ButtonAddAnimal_Click" Background="#FFFFDCB1" Content="&lt;-" HorizontalAlignment="Left" Margin="307,140,0,0" VerticalAlignment="Top" Width="70" Height="20" Grid.ColumnSpan="2"/>
+        <Button x:Name="ButtonRemoveAnimal" Click="ButtonRemoveAnimal_Click" Background="#FFFFDCB1" Content="->" HorizontalAlignment="Left" Margin="307,220,0,0" VerticalAlignment="Top" Width="70" Height="20" Grid.ColumnSpan="2"/>
 
         <Label Content="Выбранные животные:" HorizontalAlignment="Left" Margin="24,20,0,0" VerticalAlignment="Top" Height="29" Width="200"/>
         <Label Content="Доступные животные:" HorizontalAlignment="Left" Margin="87.6,20,0,0" VerticalAlignment="Top" Grid.Column="1" Height="29" Width="200"/>

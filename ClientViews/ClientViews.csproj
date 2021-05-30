@@ -234,9 +234,6 @@
     <Compile Include="WindowStatisticCountVisits.xaml.cs">
       <DependentUpon>WindowStatisticCountVisits.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WindowStatistics.xaml.cs">
-      <DependentUpon>WindowStatistics.xaml</DependentUpon>
-    </Compile>
     <Compile Include="WindowStatisticServicesVisit.xaml.cs">
       <DependentUpon>WindowStatisticServicesVisit.xaml</DependentUpon>
     </Compile>
@@ -288,10 +285,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WindowStatisticCountVisits.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WindowStatistics.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

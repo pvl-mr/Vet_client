@@ -77,13 +77,8 @@ namespace ClientViews
             Close();
         }
 
-        private void WindowExcursion_Load(object sender, RoutedEventArgs e)
+        private void WindowAnimal_Load(object sender, RoutedEventArgs e)
         {
-/*            List<VaccinationViewModel> listVaccinations = vaccinationLogic.GetFilteredList(new VaccinationBindingModel
-            {
-                ClientId = App.Client.Id
-            });
-*/
             if (id.HasValue)
             {
                 try

@@ -13,7 +13,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="DataGridExcursions" Grid.Column="0" Style="{StaticResource General_datagrid}">
+        <DataGrid x:Name="DataGridAnimals" Grid.Column="0" Style="{StaticResource General_datagrid}">
             <DataGrid.Columns>
                 <DataGridTextColumn Visibility="Hidden" Binding="{Binding Path=ID}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Кличка" Binding="{Binding Path=Name}" Width="1*"></DataGridTextColumn>

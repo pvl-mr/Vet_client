@@ -28,7 +28,6 @@ namespace ClientViews
 
         private readonly VisitLogic visitLogic;
         private readonly List<ServiceViewModel> listServices;
-        private readonly List<AnimalViewModel> listAnimals;
 
         public int Id { set { id = value; } }
         private int? id;
@@ -83,8 +82,6 @@ namespace ClientViews
         {
             try
             {
-                //Если к путешествию уже привязаны какие-то туры, в ListBox с доступными турами 
-                //оставляем только непривязанные туры
                 if (visitServices != null)
                 {
                     foreach (var service in visitServices)
@@ -161,11 +158,11 @@ namespace ClientViews
                 ListBoxSelected.Items.Add(selectedService);
             }
 
-            foreach (var tourFromAll in listServices)
+            foreach (var allServices in listServices)
             {
-                if (!visitServices.ContainsKey(tourFromAll.Id))
+                if (!visitServices.ContainsKey(allServices.Id))
                 {
-                    ListBoxAvailable.Items.Add(tourFromAll);
+                    ListBoxAvailable.Items.Add(allServices);
                 }
             }
         }
@@ -184,17 +181,9 @@ namespace ClientViews
             }
             if (ListBoxSelected.Items.Count == 0)
             {
-                MessageBox.Show("Выберите туры", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Выберите услуги", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-
-
-            foreach (var k in visitAnimals.Keys.ToList())
-            {
-                Console.WriteLine(k + " nnn" );
-            }
-           
-
             try
             {
                 visitLogic.CreateOrUpdate(new VisitBindingModel

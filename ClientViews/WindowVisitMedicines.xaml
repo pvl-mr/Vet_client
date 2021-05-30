@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClientViews"
         mc:Ignorable="d"
-        Loaded="WindowGetTravelGuides_Load"
+        Loaded="WindowGetVisitMedicines_Load"
         Title="Получение списка медикаментов" Height="450" Width="450">
     <Window.Resources>
         <Style  TargetType="Label">
