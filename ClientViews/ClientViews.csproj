@@ -42,6 +42,9 @@
     <Reference Include="DocumentFormat.OpenXml, Version=2.13.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
       <HintPath>..\packages\DocumentFormat.OpenXml.2.13.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
+    <Reference Include="DotNetProjects.DataVisualization.Toolkit, Version=6.0.90.0, Culture=neutral, PublicKeyToken=79778c5f2eed289b, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetProjects.WpfToolkit.DataVisualization.6.0.90\lib\net40\DotNetProjects.DataVisualization.Toolkit.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -225,6 +228,18 @@
     <Compile Include="WindowSingIn.xaml.cs">
       <DependentUpon>WindowSingIn.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowStatisticAnimal.xaml.cs">
+      <DependentUpon>WindowStatisticAnimal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowStatisticCountVisits.xaml.cs">
+      <DependentUpon>WindowStatisticCountVisits.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowStatistics.xaml.cs">
+      <DependentUpon>WindowStatistics.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowStatisticServicesVisit.xaml.cs">
+      <DependentUpon>WindowStatisticServicesVisit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowVaccination.xaml.cs">
       <DependentUpon>WindowVaccination.xaml</DependentUpon>
     </Compile>
@@ -265,6 +280,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WindowSingIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowStatisticAnimal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowStatisticCountVisits.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowStatistics.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowStatisticServicesVisit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -326,7 +357,9 @@
       <Name>VetclinicStorage</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

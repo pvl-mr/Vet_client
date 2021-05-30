@@ -19,7 +19,7 @@
                 <DataGridTextColumn Header="Дата" Binding="{Binding Path=Date}" Width="1*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Название прививки" Binding="{Binding Path=Name}" Width="1*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Описание" Binding="{Binding Path=Description}" Width="1*"></DataGridTextColumn>
-                <DataGridTextColumn Header="Питомец" Binding="{Binding Path=AnimalId}" Width="1*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Питомец" Binding="{Binding Path=AnimalName}" Width="1*"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Grid.Row="0" Grid.Column="1">

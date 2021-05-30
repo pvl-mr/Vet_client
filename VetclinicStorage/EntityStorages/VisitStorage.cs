@@ -40,7 +40,8 @@ namespace VetclinicStorage.EntityStorages
 
         protected override List<VisitViewModel> GetFilteredList(VisitBindingModel binding, VetclinicDbContext context)
         {
-            return context.Visits.Where(v => true)
+            return context.Visits
+                .Where(cl => cl.Id == binding.Id || cl.ClientId == binding.ClientId)
                 .Where(md => (binding.DateFrom != null) ? (md.Date  >= binding.DateFrom && md.Date <= binding.DateTo) : true)
                 .Include(v => v.VisitServices).ThenInclude(vs => vs.Service)
                 .Include(v => v.VisitAnimals).ThenInclude(va => va.Animal)

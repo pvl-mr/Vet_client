@@ -29,7 +29,16 @@
             <Button x:Name="b5" Grid.Column="4" Command="{Binding bReport2_clik}" Content="Отчет за период" Click="b5_Click" BorderThickness="1" Style="{StaticResource ButtonStyle2}"/>
         </Grid>
         <Grid Grid.Row="1" Grid.Column="0">
-            <Frame x:Name="frame" Content="{Binding CurrentPage, Mode=OneWay}" NavigationUIVisibility="Hidden"/>
+            <Rectangle>
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFBF8F2" Offset="1"/>
+                        <GradientStop Color="White"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Image x:Name="iLogo" Source="logo.png" VerticalAlignment="Bottom" HorizontalAlignment="Center" Height="500" />
+            <Frame x:Name="frame" NavigationUIVisibility="Hidden"/>
         </Grid>
     </Grid>
 </Window>

@@ -26,7 +26,7 @@
             <TextBox x:Name="TextBoxName" Text="Кличка" Style="{StaticResource TextBoxStyle1}"/>
             <TextBox x:Name="TextBoxBreed" Text="Порода" Style="{StaticResource TextBoxStyle1}" />
             <TextBox x:Name="TextBoxDescription" Text="Описание" Height=" 40" Background="#fafafa" Style="{StaticResource TextBoxStyle1}"  />
-            <ComboBox x:Name="ComboBoxPlaces" DisplayMemberPath="Name" Margin="0, 20" SelectedValuePath="ID" FontSize="15"/>
+            
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>

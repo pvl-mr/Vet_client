@@ -127,7 +127,7 @@
             <Setter Property="CanUserReorderColumns" Value="False"/>
             <Setter Property="CanUserSortColumns" Value="False"/>
             <Setter Property="CanUserDeleteRows" Value="False"/>
-            <Setter Property="FontFamily" Value="{StaticResource Label_fontFamily}"/>
+            <Setter Property="FontFamily" Value=" {StaticResource Label_fontFamily}"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="SelectionMode" Value="Single"/>
         </Style>

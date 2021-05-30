@@ -22,8 +22,8 @@
         <StackPanel Grid.Row="1" Grid.Column="1" >
             <TextBlock Text="Айнеболит" FontSize="26" Margin="0 10 0 30" TextAlignment="Center" FontWeight="Bold"/>
             <TextBlock Text="Войдите, чтобы продолжить" FontSize="20" Margin="0 0 0 20" TextAlignment="Center" ></TextBlock>
-            <TextBox x:Name="TextBoxLogin" Text="Введите логин" Style="{DynamicResource TextBoxStyle1}" />
-            <TextBox x:Name="TextBoxPassword" Text="Введите пароль" Style="{StaticResource TextBoxStyle1}"/>
+            <TextBox x:Name="TextBoxLogin" Text="pavlovamarr@gmail.com" Style="{DynamicResource TextBoxStyle1}" />
+            <TextBox x:Name="TextBoxPassword" Text="47905273" Style="{StaticResource TextBoxStyle1}"/>
 
             <Button x:Name="bLogin" Content="Войти" Click="bSignIn_Click" Margin="10 20 10 0" Height="45" Style="{DynamicResource ButtonStyle1}" Background="#FFFFDCB1"></Button>
             <Button  Content="Зарегестрироваться" Click="bSignUp_Click" Margin="10" Height="45" Style="{DynamicResource ButtonStyle1}" Background="#Fafafa" BorderThickness="1"></Button>

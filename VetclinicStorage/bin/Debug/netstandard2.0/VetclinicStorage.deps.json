@@ -32,6 +32,14 @@
           }
         }
       },
+      "DotNetProjects.WpfToolkit.DataVisualization/6.0.90": {
+        "runtime": {
+          "lib/net40/DotNetProjects.DataVisualization.Toolkit.dll": {
+            "assemblyVersion": "6.0.90.0",
+            "fileVersion": "6.0.90.0"
+          }
+        }
+      },
       "EntityFramework/6.4.4": {},
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "dependencies": {
@@ -437,6 +445,7 @@
       "ClientBusinessLogic/1.0.0": {
         "dependencies": {
           "DocumentFormat.OpenXml": "2.13.0",
+          "DotNetProjects.WpfToolkit.DataVisualization": "6.0.90",
           "PDFsharp-MigraDoc": "1.50.5147"
         },
         "runtime": {
@@ -457,6 +466,13 @@
       "sha512": "sha512-0m9oxdnAwIyq6+0L/bGfyPkkakPuVI/zT5AYQgN5jbMmNJkCVFLiZmtjtqXrTbStCBJu/yxS3nS/6zTe2mT1Nw==",
       "path": "documentformat.openxml/2.13.0",
       "hashPath": "documentformat.openxml.2.13.0.nupkg.sha512"
+    },
+    "DotNetProjects.WpfToolkit.DataVisualization/6.0.90": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GZa9xIjHJcW1g2qv+SwbiTrN1I0gSThwaXaTo+lYyt8SX9IsU/d2VBo5pVj8v8dakfNQ2lBsJMDQISNblD4B6A==",
+      "path": "dotnetprojects.wpftoolkit.datavisualization/6.0.90",
+      "hashPath": "dotnetprojects.wpftoolkit.datavisualization.6.0.90.nupkg.sha512"
     },
     "EntityFramework/6.4.4": {
       "type": "package",

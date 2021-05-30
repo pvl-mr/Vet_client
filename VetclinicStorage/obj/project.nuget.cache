@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "TmmjS1XPMCQS8zq4nKuuyWeGTfgCqBOoNmXduciKgs+8tD3XRFffv/CpZGDC7peKdA6oL171ImJ/as+FyK1MFQ==",
+  "dgSpecHash": "5hUjFtkz4/l5bPtC4QeAwEZHja4zZVgPmWveEz43o772ZM/EjkIdkMbXMrOlck8GNy0JBeFHirARyTnt4ySCHg==",
   "success": true,
   "projectFilePath": "C:\\Users\\79962\\source\\repos\\Vetclinic\\VetclinicStorage\\VetclinicStorage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\79962\\.nuget\\packages\\documentformat.openxml\\2.13.0\\documentformat.openxml.2.13.0.nupkg.sha512",
+    "C:\\Users\\79962\\.nuget\\packages\\dotnetprojects.wpftoolkit.datavisualization\\6.0.90\\dotnetprojects.wpftoolkit.datavisualization.6.0.90.nupkg.sha512",
     "C:\\Users\\79962\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\79962\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\79962\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
@@ -45,6 +46,16 @@
     "C:\\Users\\79962\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"DotNetProjects.WpfToolkit.DataVisualization 6.0.90\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \".NETStandard,Version=v2.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "DotNetProjects.WpfToolkit.DataVisualization",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    },
     {
       "code": "NU1701",
       "level": "Warning",

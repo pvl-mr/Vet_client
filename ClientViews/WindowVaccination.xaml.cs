@@ -51,7 +51,7 @@ namespace ClientViews
 
                     if (view != null)
                     {
-                        DatePicker.DisplayDate = view.Date;
+                        DatePicker.SelectedDate = view.Date;
                         TextBoxName.Text = view.Name;
                         TextBoxDescription.Text = view.Description;
                         ComboBoxVaccinations.SelectedValue = view.AnimalId;

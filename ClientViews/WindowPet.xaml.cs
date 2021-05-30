@@ -88,7 +88,7 @@ namespace ClientViews
             {
                 try
                 {
-                    var view = animalLogic.GetFilteredList(new AnimalBindingModel { ClientId = App.Client.Id, Id = id })?[0];
+                    var view = animalLogic.GetFilteredList(new AnimalBindingModel {Id = id })?[0];
 
                     if (view != null)
                     {

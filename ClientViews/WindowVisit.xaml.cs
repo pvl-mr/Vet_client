@@ -55,6 +55,7 @@ namespace ClientViews
                     if (view != null)
                     {
                         DatePicker.SelectedDate = view.Date;
+                        TextBoxComment.Text = view.Comment;
                         visitServices = view.Services;
                         visitAnimals = view.Animals;
                         LoadData();

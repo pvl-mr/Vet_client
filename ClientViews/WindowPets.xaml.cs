@@ -104,6 +104,16 @@ namespace ClientViews
         {
             LoadData();
         }
+
+        private void ButtonRefresh_Click_1(object sender, RoutedEventArgs e)
+        {
+            var form = Container.Resolve<WindowStatisticAnimal>();
+
+            if (form.ShowDialog() == true)
+            {
+                LoadData();
+            }
+        }
     }
 }
 

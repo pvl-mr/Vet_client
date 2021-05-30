@@ -11,9 +11,5 @@ namespace ClientBusinessLogic.BindingModels
         public string Breed { get; set; }
         public string Description { get; set; }
         public int ClientId { get; set; }
-
-        // 4 пункт задания. Выбираем из списка Visits несколько записей и сохраняем их id.
-        // При Сохранении в бд создавать записи VisitAnimal. VisitId = AnimalBindingModel.VisitIds[0...n], AnimalId = VisitBindingModel.Id.
-       // public List<int> VisitIds;
     }
 }

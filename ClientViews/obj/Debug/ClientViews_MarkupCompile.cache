@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\79962\source\repos\Vetclinic\ClientViews\App.xaml
-12-1419145190
+16-1121663817
 
-16-1299554240
-69-1604496391
-WindowAddVisitAnimals.xaml;WindowMain.xaml;WindowPet.xaml;WindowPets.xaml;WindowReportVisits.xaml;WindowSignUp.xaml;WindowSingIn.xaml;WindowVaccination.xaml;WindowVaccinations.xaml;WindowVisit.xaml;WindowVisitMedicines.xaml;WindowVisits.xaml;
+20-688203707
+70656703629
+WindowAddVisitAnimals.xaml;WindowMain.xaml;WindowPet.xaml;WindowPets.xaml;WindowReportVisits.xaml;WindowSignUp.xaml;WindowSingIn.xaml;WindowStatisticAnimal.xaml;WindowStatisticCountVisits.xaml;WindowStatistics.xaml;WindowStatisticServicesVisit.xaml;WindowVaccination.xaml;WindowVaccinations.xaml;WindowVisit.xaml;WindowVisitMedicines.xaml;WindowVisits.xaml;
 
 False
 

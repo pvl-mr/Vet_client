@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClientViews"
         mc:Ignorable="d"
-        d:DesignHeight="450" d:DesignWidth="800"
+         d:DesignWidth="800"
         Loaded="WindowTravels_Load"
       Title="VisitPage" FontFamily="Calibri Light">
 
@@ -14,7 +14,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="180"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="DataGridTravels" HorizontalAlignment="Left" Height="420" Margin="0,0,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="false" CanUserReorderColumns="False" >
+        <DataGrid x:Name="DataGridTravels" HorizontalAlignment="Left" Height="420" Margin="0,0,0,0" VerticalAlignment="Top" AutoGenerateColumns="False" CanUserAddRows="false" CanUserReorderColumns="False" >
             <DataGrid.Columns>
                 <DataGridTextColumn Visibility="Hidden" Binding="{Binding Path=ID}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Дата" Binding="{Binding Path=Date}" Width="0.5*"></DataGridTextColumn>
@@ -26,6 +26,8 @@
             <Button Content="Редактировать" Click="ButtonUpdate_Click" Height="45" Margin="10" Background="#FFFFDCB1" Style="{StaticResource ButtonStyle1}"/>
             <Button Content="Выбрать питомца" Click="ButtonBondExcursions_Click" Margin="10" Height="45" Background="#FFFFDCB1" Style="{StaticResource ButtonStyle1}"/>
             <Button Content="Удалить" Margin="10" Click="ButtonDelete_Click" Height="45" Background="#FFFFDCB1" Style="{StaticResource ButtonStyle1}"/>
+            <Button Content="Статистика кол-во" Margin="10" Click="Button_Click" Height="45" Background="#FFFFDCB1" Style="{StaticResource ButtonStyle1}"/>
+            <Button Content="Статистика услуг" Margin="10" Click="Button_Click_1" Height="45" Background="#FFFFDCB1" Style="{StaticResource ButtonStyle1}"/>
         </StackPanel>
 
     </Grid>

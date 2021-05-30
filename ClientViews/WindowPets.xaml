@@ -6,7 +6,7 @@
         xmlns:gl="clr-namespace:System.Globalization;assembly=mscorlib"
         mc:Ignorable="d"
         Loaded="WindowPets_Load"
-        Height="450" Width="900" ResizeMode="NoResize"
+        Height="450" ResizeMode="NoResize"
       Title="PetsPage" FontFamily="Calibri Light">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -27,6 +27,7 @@
             <Button x:Name="ButtonUpdate" Click="ButtonUpdate_Click" Content="Редактировать" Margin="10" Height="45" Background="#FFFFDCB1" Style="{StaticResource ButtonStyle1}"/>
             <Button x:Name="ButtonDelete" Click="ButtonDelete_Click" Content="Удалить" Margin="10" Height="45" Background="#FFFFDCB1" Style="{StaticResource ButtonStyle1}"/>
             <Button x:Name="ButtonRefresh" Click="ButtonRefresh_Click" Content="Обновить" Margin="10" Height="45" Background="#FFFFDCB1" Style="{StaticResource ButtonStyle1}"/>
+            <Button x:Name="ButtonStatistic" Click="ButtonRefresh_Click_1" Content="Статистика" Margin="10" Height="45" Background="#FFFFDCB1" Style="{StaticResource ButtonStyle1}"/>
         </StackPanel>
         <Grid Grid.Row="0" Grid.Column="0" >
             <Frame Content="{Binding CurrentPage}"/>

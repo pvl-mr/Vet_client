@@ -135,5 +135,25 @@ namespace ClientViews
                 LoadData();
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var form = Container.Resolve<WindowStatisticCountVisits>();
+
+            if (form.ShowDialog() == true)
+            {
+                LoadData();
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var form = Container.Resolve<WindowStatisticServicesVisit>();
+
+            if (form.ShowDialog() == true)
+            {
+                LoadData();
+            }
+        }
     }
 }

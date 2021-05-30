@@ -14,14 +14,14 @@ namespace VetclinicStorage.EntityStorages
 
         public VaccinationStorage()
         {
-            selector = m => new VaccinationViewModel { 
+            selector = m => new VaccinationViewModel {
                 Id = m.Id,
                 Date = m.Date,
                 Name = m.Name,
                 Description = m.Description,
                 AnimalName = m.Animal.Name,
                 AnimalId = m.AnimalId
-                };
+            };
         }
 
         protected override VaccinationViewModel CreateViewModel(Vaccination model)
@@ -31,12 +31,12 @@ namespace VetclinicStorage.EntityStorages
 
         protected override Vaccination GetElement(VaccinationBindingModel binding, VetclinicDbContext context)
         {
-            return context.Vaccinations.SingleOrDefault(m => m.Id == binding.Id);
+            return context.Vaccinations.Include(m => m.Client).Include(m => m.Animal).SingleOrDefault(m => m.Id == binding.Id);
         }
 
         protected override List<VaccinationViewModel> GetFilteredList(VaccinationBindingModel binding, VetclinicDbContext context)
         {
-            return context.Vaccinations.Include(m => m.Client).Include(m => m.Animal).Where(m => m.ClientId == binding.ClientId || m.AnimalId == binding.AnimalId).Select(selector).ToList();
+            return context.Vaccinations.Include(m => m.Client).Include(m => m.Animal).Where(m => m.Id == binding.Id || m.Name == binding.Name || m.ClientId == binding.ClientId).Select(selector).ToList();
         }
 
         protected override List<VaccinationViewModel> GetFullList(VetclinicDbContext context)

@@ -44,6 +44,10 @@
               "target": "Package",
               "version": "[2.13.0, )"
             },
+            "DotNetProjects.WpfToolkit.DataVisualization": {
+              "target": "Package",
+              "version": "[6.0.90, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
